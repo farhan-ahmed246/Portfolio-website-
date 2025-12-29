@@ -68,8 +68,6 @@ with left_column:
 
 
 # ---------------- Projects ----------------
-st.write("---")
-st.header("My Projects")
 
 # ---------------- Projects ----------------
 st.write("---")
