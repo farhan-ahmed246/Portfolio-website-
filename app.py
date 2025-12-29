@@ -39,8 +39,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ---------------- CSS ----------------
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ---------------- Lottie (WORKING URL) ----------------
 lottie_animation = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json')
