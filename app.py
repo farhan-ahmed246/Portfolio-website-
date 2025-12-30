@@ -141,7 +141,7 @@ st.write("---")
 st.header("Get In Touch With Me!")
 
 contact_form = """
-<form action="https://formsubmit.co/ucristano37@gmail.com" method="POST">
+<form action="https://formsubmit.co/fmukhtar420@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
 
