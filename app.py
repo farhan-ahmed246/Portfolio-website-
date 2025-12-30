@@ -149,5 +149,5 @@ contact_form = """
 left, right = st.columns(2)
 with left:
     st.markdown(contact_form, unsafe_allow_html=True)
-with right:
+else:
     st.info("Your message will be delivered safely & quickly ✅")
