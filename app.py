@@ -50,38 +50,40 @@ st.write("---")
 st.header("My Projects")
 
 projects = [
-        {
-            "image": "project1.png",
-            "title": "Currency Exchange App",
-            "description": "Global 25 Currency Exchange – Fast, Secure & Anytime 💱",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_currencyexchange-forextrading-fastcash-activity-7405346219301953536-gk9K"
-        },
-        {
-            "image": "project2.png",
-            "title": "PDF Generator",
-            "description": "I Built a Fully Automated PDF Generator Using Python — Turning Complex Documents Into One-Click Exports! 🚀",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_pythondeveloper-automationtools-pdfgenerator-activity-7401890025140797440-MDk4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "project3.png",
-            "title": "Not REAL Airplane Ticket Booking Automation",
-            "description": "I Just Built a Complete Flight Registration System Using Streamlit — From User Inputs to Auto-Generated Flight Details ✈️🔥",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_streamlit-pythonprojects-codingjourney-activity-7399890361235439616-alJs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "project4.png",
-            "title": "Quiz Game with Live API",
-            "description": "Build a Dynamic Quiz Game with live API using Python 🤖",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_build-a-dynamic-quiz-game-with-live-api-with-ugcPost-7369632106689323009-TsNS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "project5.png",
-            "title": "Calendar App",
-            "description": "Enter any year and see full months and dates of that year 🤖",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_this-is-a-small-project-in-it-if-you-ugcPost-7369974497401180160-6Hpe?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-    ]
+    {
+        "image": "project1.png",
+        "title": "Currency Exchange App",
+        "description": "Global 25 Currency Exchange – Fast, Secure & Anytime 💱",
+        "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_currencyexchange-forextrading-fastcash-activity-7405346219301953536-gk9K"
+    },
+    {
+        "image": "project2.png",
+        "title": "PDF Generator",
+        "description": "Fully Automated PDF Generator Using Python — One-Click Exports! 🚀",
+        "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_pythondeveloper-automationtools-pdfgenerator-activity-7401890025140797440-MDk4"
+    },
+    {
+        "image": "project3.png",
+        "title": "Not REAL Airplane Ticket Booking Automation",
+        "description": "Complete Flight Registration System Using Streamlit ✈️🔥",
+        "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_streamlit-pythonprojects-codingjourney-activity-7399890361235439616-alJs"
+    },
+    {
+        "image": "project4.png",
+        "title": "Quiz Game with Live API",
+        "description": "Dynamic Quiz Game with live API using Python 🤖",
+        "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_build-a-dynamic-quiz-game-with-live-api-with-ugcPost-7369632106689323009-TsNS"
+    },
+    {
+        "image": "project5.png",
+        "title": "Calendar App",
+        "description": "Enter any year and see full months and dates of that year 🤖",
+        "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_this-is-a-small-project-in-it-if-you-ugcPost-7369974497401180160-6Hpe"
+    },
+]
 
+# Create columns dynamically
+cols = st.columns(len(projects))
 
 for i, proj in enumerate(projects):
     with cols[i]:
@@ -99,7 +101,7 @@ st.header("Contact Info")
 st.write("📞 +92 336 3016943")
 st.write("📧 ucristano37@gmail.com")
 
-# ---------------- CONTACT FORM CSS (SAFE) ----------------
+# ---------------- CONTACT FORM CSS ----------------
 st.markdown("""
 <style>
 form {
@@ -141,7 +143,7 @@ st.write("---")
 st.header("Get In Touch With Me!")
 
 contact_form = """
-<form action="https://formsubmit.co/fmukhtar420@gmail.com" method="POST">
+<form action="https://formsubmit.co/ucristano37@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
 
@@ -154,7 +156,5 @@ contact_form = """
 """
 
 left, right = st.columns(2)
-
 with left:
     st.markdown(contact_form, unsafe_allow_html=True)
-
