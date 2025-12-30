@@ -158,5 +158,3 @@ left, right = st.columns(2)
 with left:
     st.markdown(contact_form, unsafe_allow_html=True)
 
-else:
-    st.print("YOUR MESSAGE HAS BEEN DELIVERED.")
