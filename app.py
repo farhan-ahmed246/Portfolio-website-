@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
@@ -106,12 +107,18 @@ projects = [
 
 for proj in projects:
     img_col, txt_col = st.columns((1, 2))
+
     with img_col:
-        st.image(proj["image"], width=280)  # ye ab file ko read karega
+        if os.path.exists(proj["image"]):
+            st.image(proj["image"], width=280)
+        else:
+            st.warning(f"Missing image: {proj['image']}")
+
     with txt_col:
         st.subheader(proj["title"])
         st.write(proj["description"])
         st.markdown(f"[Watch Video]({proj['link']})")
+
     st.write("---")
 
 
