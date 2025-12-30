@@ -1,4 +1,4 @@
-import streamlit as st
+us may bass tumhay project1.png hai image ka naam hai unko change kardo proj1.png rakho or proj2.png proj3.png proj4.png proj5.png import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 
@@ -39,7 +39,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # ---------------- CSS ----------------
-
 
 # ---------------- Lottie (WORKING URL) ----------------
 lottie_animation = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json')
