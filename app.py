@@ -1,4 +1,4 @@
-us may bass tumhay project1.png hai image ka naam hai unko change kardo proj1.png rakho or proj2.png proj3.png proj4.png proj5.png import streamlit as st
+import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 
