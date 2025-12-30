@@ -73,31 +73,31 @@ st.header("My Projects")
 
 projects = [
         {
-            "image": "project1.png",
+            "image": "proj1.png",
             "title": "Currency Exchange App",
             "description": "Global 25 Currency Exchange – Fast, Secure & Anytime 💱",
             "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_currencyexchange-forextrading-fastcash-activity-7405346219301953536-gk9K"
         },
         {
-            "image": "project2.png",
+            "image": "proj2.png",
             "title": "PDF Generator",
             "description": "I Built a Fully Automated PDF Generator Using Python — Turning Complex Documents Into One-Click Exports! 🚀",
             "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_pythondeveloper-automationtools-pdfgenerator-activity-7401890025140797440-MDk4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
         },
         {
-            "image": "project3.png",
+            "image": "projt3.png",
             "title": "Not REAL Airplane Ticket Booking Automation",
             "description": "I Just Built a Complete Flight Registration System Using Streamlit — From User Inputs to Auto-Generated Flight Details ✈️🔥",
             "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_streamlit-pythonprojects-codingjourney-activity-7399890361235439616-alJs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
         },
         {
-            "image": "project4.png",
+            "image": "proj4.png",
             "title": "Quiz Game with Live API",
             "description": "Build a Dynamic Quiz Game with live API using Python 🤖",
             "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_build-a-dynamic-quiz-game-with-live-api-with-ugcPost-7369632106689323009-TsNS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
         },
         {
-            "image": "project5.png",
+            "image": "proj5.png",
             "title": "Calendar App",
             "description": "Enter any year and see full months and dates of that year 🤖",
             "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_this-is-a-small-project-in-it-if-you-ugcPost-7369974497401180160-6Hpe?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
