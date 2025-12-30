@@ -105,15 +105,7 @@ projects = [
     ]
 
 
-for proj in projects:
-    img_col, txt_col = st.columns((1, 2))
-    with img_col:
-        st.image(proj["image"], width=280)
-    with txt_col:
-        st.subheader(proj["title"])
-        st.write(proj["description"])
-        st.markdown(f"[Watch Video]({proj['link']})")
-    st.write("---")
+
 
 # ---------------- Contact Info ----------------
 st.header("Contact Info")
