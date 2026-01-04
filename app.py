@@ -3,6 +3,9 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 
+
+st.write("APP STARTED")
+
 # ---------------- Page Config ----------------
 st.set_page_config(
     page_title="My Webpage",
