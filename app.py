@@ -66,9 +66,10 @@ with left_column:
     - Creative Solutions  
     """)
 
-    with right_column:
-        if lottie_animation:
-            st_lottie(lottie_animation, height=300, key="animation")
+with right_column:
+    if lottie_animation:
+        st_lottie(lottie_animation, height=300, key="animation")
+
 
 
 # ---------------- Projects ----------------
