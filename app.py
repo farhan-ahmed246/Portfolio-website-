@@ -136,11 +136,14 @@ st.write("📧 ucristano37@gmail.com")
 st.write("---")
 st.header("Get In Touch With Me!")
 
+import streamlit as st
+
+# ---------------- Contact Form ----------------
 contact_form = """
 <form action="https://formsubmit.co/ucristano37@gmail.com" method="POST">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://thankyou-page.vercel.app">
+  <input type="hidden" name="_next" value="https://farhan-portfolio.streamlit.app?submitted=true">
 
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
@@ -153,5 +156,10 @@ contact_form = """
 left, right = st.columns(2)
 with left:
     st.markdown(contact_form, unsafe_allow_html=True)
-with right:
-    st.info("Your message will be delivered safely & quickly ✅")
+
+# ---------------- Success Message ----------------
+query_params = st.experimental_get_query_params()
+if "submitted" in query_params:
+    with right:
+        st.success("✅ Your message has been delivered!")
+
