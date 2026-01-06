@@ -159,7 +159,9 @@ with left:
 
 # ---------------- Success Message ----------------
 params = st.query_params
-if "submitted" in query_params:
+
+if "submitted" in params:
     with right:
         st.success("✅ Your message has been delivered!")
+
 
