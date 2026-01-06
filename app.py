@@ -158,7 +158,7 @@ with left:
     st.markdown(contact_form, unsafe_allow_html=True)
 
 # ---------------- Success Message ----------------
-query_params = st.experimental_get_query_params()
+st.query_params
 if "submitted" in query_params:
     with right:
         st.success("✅ Your message has been delivered!")
