@@ -77,8 +77,6 @@ with right_column:
 st.write("---")
 st.header("My Projects")
 
-st.header("My Projects")
-
 projects = [
         {
             "image": "proj1.png",
