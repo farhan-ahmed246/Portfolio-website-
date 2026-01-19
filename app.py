@@ -88,19 +88,19 @@ projects = [
     {
         "title": "PDF GENERATOR",
         "description": "Automation tool using Python to generate PDFs easily.",
-        "image": "proj1.png",
+        "image": "proj2.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_pythondeveloper-automationtools-pdfgenerator-activity-7412236161559191552-jQlG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Airplane Flight",
         "description": "Streamlit app to manage airplane ticket registrations.",
-        "image": "proj2.png",
+        "image": "proj1.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects-codingjourney-activity-7400967741312004097-J1_j?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Currency Exchanger",
         "description": "Real-time currency converter with Forex integration.",
-        "image": "proj3.png",
+        "image": "proj4.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange-forextrading-fastcash-activity-7410780475549450241-L-a3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
