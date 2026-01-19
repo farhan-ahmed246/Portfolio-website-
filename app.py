@@ -106,7 +106,7 @@ projects = [
     {
         "title": "Streamlit Web App",
         "description": "Complete Streamlit web app for interactive projects.",
-        "image": "proj5.png",
+        "image": "proj6.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_title-build-a-complete-streamlit-web-activity-7401542239014862848-ndM4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
