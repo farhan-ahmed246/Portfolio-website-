@@ -1,18 +1,18 @@
 import os
 import streamlit as st
 import requests
+from PIL import Image
 from streamlit_lottie import st_lottie
+import webbrowser
 
-# ---------------- Page Config (MUST BE FIRST) ----------------
+# ---------------- Page Config ----------------
 st.set_page_config(
     page_title="My Webpage",
     page_icon="🎉",
     layout="wide"
 )
 
-st.write("APP STARTED")
-
-# ---------------- Function: Load Lottie ----------------
+# ---------------- Lottie Loader ----------------
 def load_lottieurl(url):
     try:
         r = requests.get(url, timeout=10)
@@ -45,22 +45,19 @@ st.markdown(f"""
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- Lottie ----------------
+# ---------------- Header ----------------
+st.subheader("My Personal Portfolio 👋")
+st.title("Welcome to My Personal Portfolio")
+st.write("This is a place where I share my projects and work.")
+st.write("[LinkedIn Profile](https://www.linkedin.com/in/farhan-ahmed-05140b299)")
+
+# ---------------- Lottie Animation ----------------
 lottie_animation = load_lottieurl(
     "https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json"
 )
 
-# ---------------- Header ----------------
-st.subheader("My Personal portfolio 👋")
-st.title("Welcome to My Personal Portfolio")
-st.write("This is a place where I share my projects and work.")
-st.write("[Learn More >](https://www.linkedin.com/in/abdul-nafay-98299b382)")
-
-# ---------------- What I Do ----------------
-st.write("---")
-left_column, right_column = st.columns(2)
-
-with left_column:
+left_col, right_col = st.columns(2)
+with left_col:
     st.header("What I Do")
     st.markdown("""
     - Project Development  
@@ -68,90 +65,92 @@ with left_column:
     - Automation Tools  
     - Creative Solutions  
     """)
-
-with right_column:
+with right_col:
     if lottie_animation:
         st_lottie(lottie_animation, height=300)
 
-# ---------------- Projects ----------------
+
+
+# ---------------- Contact Info Buttons ----------------
+st.subheader("Contact Me 📞✉️")
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("📞 WhatsApp / Call +92 336 3016943"):
+        webbrowser.open_new_tab("https://wa.me/923363016943")
+with col2:
+    if st.button("📧 Email: ucristao37@gmail.com"):
+        webbrowser.open_new_tab("mailto:ucristao37@gmail.com")
+
 st.write("---")
-st.header("My Projects")
 
+# ---------------- Projects ----------------
 projects = [
-        {
-            "image": "proj1.png",
-            "title": "Currency Exchange App",
-            "description": "Global 25 Currency Exchange – Fast, Secure & Anytime 💱",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_currencyexchange-forextrading-fastcash-activity-7405346219301953536-gk9K"
-        },
-        {
-            "image": "proj2.png",
-            "title": "PDF Generator",
-            "description": "I Built a Fully Automated PDF Generator Using Python — Turning Complex Documents Into One-Click Exports! 🚀",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_pythondeveloper-automationtools-pdfgenerator-activity-7401890025140797440-MDk4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "proj3.png",
-            "title": "Not REAL Airplane Ticket Booking Automation",
-            "description": "I Just Built a Complete Flight Registration System Using Streamlit — From User Inputs to Auto-Generated Flight Details ✈️🔥",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_streamlit-pythonprojects-codingjourney-activity-7399890361235439616-alJs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "proj4.png",
-            "title": "Quiz Game with Live API",
-            "description": "Build a Dynamic Quiz Game with live API using Python 🤖",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_build-a-dynamic-quiz-game-with-live-api-with-ugcPost-7369632106689323009-TsNS?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-        {
-            "image": "proj5.png",
-            "title": "Calendar App",
-            "description": "Enter any year and see full months and dates of that year 🤖",
-            "link": "https://www.linkedin.com/posts/abdul-nafay-98299b382_this-is-a-small-project-in-it-if-you-ugcPost-7369974497401180160-6Hpe?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAF55dLIBUEsF4tBVSCY-udhNhU446vcrXFw"
-        },
-    ]
+    {
+        "title": "PDF GENERATOR",
+        "description": "Automation tool using Python to generate PDFs easily.",
+        "image": "streamlit_lottie.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_pythondeveloper-automationtools-pdfgenerator-activity-7412236161559191552-jQlG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
+    },
+    {
+        "title": "MY Portfolio",
+        "description": "Personal portfolio showcasing skills and projects.",
+        "image": "streamlit_lottie.png",
+        "url": None
+    },
+    {
+        "title": "Airplane Flight",
+        "description": "Streamlit app to manage airplane ticket registrations.",
+        "image": "streamlit_lottie.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects-codingjourney-activity-7400967741312004097-J1_j?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
+    },
+    {
+        "title": "Currency Exchanger",
+        "description": "Real-time currency converter with Forex integration.",
+        "image": "streamlit_lottie.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange-forextrading-fastcash-activity-7410780475549450241-L-a3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
+    },
+    {
+        "title": "Streamlit Web App",
+        "description": "Complete Streamlit web app for interactive projects.",
+        "image": "streamlit_lottie.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_title-build-a-complete-streamlit-web-activity-7401542239014862848-ndM4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
+    },
+    {
+        "title": "Quiz Game with Live API",
+        "description": "Interactive quiz game fetching questions from live APIs.",
+        "image": "streamlit_lottie.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_quizgame-programmingproject-webdevelopment-activity-7419014868546060288-Zhlp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
+    }
+]
 
-
-for proj in projects:
-    img_col, txt_col = st.columns((1, 2))
-
-    with img_col:
-        if os.path.exists(proj["image"]):
-            st.image(proj["image"], width=280)
-        else:
-            st.info(f"Image not found: {proj['image']}")
-
-    with txt_col:
-        st.subheader(proj["title"])
-        st.write(proj["description"])
-        st.markdown(f"[Watch Video]({proj['link']})")
-
+for project in projects:
+    st.subheader(project["title"])
+    st.write(project["description"])
+    img = Image.open(project["image"])
+    st.image(img, use_column_width=True)
+    
+    # Watch Now button
+    if project["url"]:
+        if st.button(f"▶ Watch Now: {project['title']}"):
+            webbrowser.open_new_tab(project["url"])
+    
+    # Download Resume button
+    if st.button(f"📄 Download Resume: {project['title']}"):
+        webbrowser.open_new_tab("/mnt/data/53bf4c03-001e-499c-ba26-53bde8ca1b4e.docx")
+    
     st.write("---")
 
-# ---------------- Contact Info ----------------
-st.header("Contact Info")
-st.write("📞 +92 336 3016943")
-st.write("📧 ucristano37@gmail.com")
+# ---------------- Skills ----------------
+st.subheader("Skills 🛠️")
+skills = ["HTML", "TypeScript", "JavaScript", "Python", "Agentic AI Engineer", "Next.js"]
+st.write(", ".join(skills))
 
-# ---------------- Contact Form ----------------
-st.write("---")
-st.header("Get In Touch With Me!")
-
-contact_form = """
-<form action="https://formsubmit.co/ucristano37@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="?submitted=true">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message 🚀</button>
-</form>
-"""
-
-left, right = st.columns(2)
-with left:
-    st.markdown(contact_form, unsafe_allow_html=True)
-
-if "submitted" in st.query_params:
-    with right:
-        st.success("✅ Your message has been delivered!")
+# ---------------- Social Buttons ----------------
+st.write("Connect with me:")
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("🔗 LinkedIn"):
+        webbrowser.open_new_tab("https://www.linkedin.com/in/farhan-ahmed-05140b299")
+with col2:
+    if st.button("🐙 GitHub"):
+        webbrowser.open_new_tab("https://github.com/farhan-ahmed246")
