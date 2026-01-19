@@ -1,242 +1,186 @@
 import os
 import streamlit as st
-import requests
-from PIL import Image
-from streamlit_lottie import st_lottie
-import webbrowser
-
-# ---------------- Page Config ----------------
-st.set_page_config(
-    page_title="My Webpage",
-    page_icon="🎉",
-    layout="wide"
-)
-
-# ---------------- Lottie Loader ----------------
-def load_lottieurl(url):
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code != 200:
-            return None
-        return r.json()
-    except:
-        return None
-
-# ---------------- Sidebar Theme ----------------
-st.sidebar.title("Theme Settings")
-theme = st.sidebar.radio("Select Theme", ["Light White", "Full White", "Black"])
-
-if theme == "Light White":
-    bg = "#f4f6f8"
-    text = "#1f2937"
-elif theme == "Full White":
-    bg = "#ffffff"
-    text = "#000000"
-else:
-    bg = "#0e1117"
-    text = "#ffffff"
-
-st.markdown(f"""
-<style>
-.stApp {{
-    background-color: {bg};
-    color: {text};
-}}
-</style>
-""", unsafe_allow_html=True)
-
-# ---------------- Header ----------------
-st.subheader("My Personal Portfolio 👋")
-st.title("Welcome to My Personal Portfolio")
-st.write("This is a place where I share my projects and work.")
-st.write("[LinkedIn Profile](https://www.linkedin.com/in/farhan-ahmed-05140b299)")
-
-# ---------------- Lottie Animation ----------------
-lottie_animation = load_lottieurl(
-    "https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json"
-)
-
-left_col, right_col = st.columns(2)
-with left_col:
-    st.header("What I Do")
-    st.markdown("""
-    - Project Development  
-    - Web / App Design  
-    - Automation Tools  
-    - Creative Solutions  
-    """)
-with right_col:
-    if lottie_animation:
-        st_lottie(lottie_animation, height=300)
-
-
-
-# ---------------- Contact Info Buttons ----------------
-st.subheader("Contact Me 📞✉️")
-col1, col2 = st.columns(2)
-with col1:
-    if st.button("📞 WhatsApp / Call +92 336 3016943"):
-        webbrowser.open_new_tab("https://wa.me/923363016943")
-with col2:
-    if st.button("📧 Email: ucristao37@gmail.com"):
-        webbrowser.open_new_tab("mailto:ucristao37@gmail.com")
-
-import os
-import streamlit as st
-from PIL import Image
 import webbrowser
 import requests
+from PIL import Image
 from streamlit_lottie import st_lottie
 
 # ---------------- PAGE CONFIG ----------------
-st.set_page_config(page_title="My Portfolio", page_icon="🎉", layout="wide")
+st.set_page_config(page_title="Farhan Portfolio", page_icon="🔥", layout="wide")
 
-# ---------------- Lottie Loader ----------------
-def load_lottieurl(url):
-    try:
-        r = requests.get(url, timeout=10)
-        if r.status_code != 200:
-            return None
-        return r.json()
-    except:
-        return None
-
-# ---------------- THEME ----------------
-st.sidebar.title("Theme Settings")
-theme = st.sidebar.radio("Select Theme", ["Light White", "Full White", "Black"])
-
-if theme == "Light White":
-    bg = "#f4f6f8"
-    text = "#1f2937"
-elif theme == "Full White":
-    bg = "#ffffff"
-    text = "#000000"
-else:
-    bg = "#0e1117"
-    text = "#ffffff"
-
-st.markdown(f"""
+# ---------------- BLACK BACKGROUND FIX ----------------
+st.markdown("""
 <style>
-.stApp {{
-    background-color: {bg};
-    color: {text};
-}}
+.stApp {
+    background-color: #000000;
+    color: white;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- TOP NAV BUTTONS ----------------
-nav_cols = st.columns(3)
-with nav_cols[0]:
+# ---------------- SESSION STATE ----------------
+if "section" not in st.session_state:
+    st.session_state.section = "projects"
+
+# ---------------- LOTTIE LOADER ----------------
+def load_lottie(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+lottie_anim = load_lottie("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+
+# ---------------- TOP NAV BAR ----------------
+left, space, right = st.columns([2, 5, 4])
+
+with left:
     if st.button("📁 Projects"):
-        st.session_state['section'] = "projects"
-with nav_cols[1]:
-    if st.button("📞 Contact Me"):
-        st.session_state['section'] = "contact"
-with nav_cols[2]:
-    if st.button("📄 Download Resume"):
-        st.session_state['section'] = "resume"
+        st.session_state.section = "projects"
+
+with right:
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        if st.button("📞 Contact"):
+            st.session_state.section = "contact"
+    with c2:
+        if st.button("🛠 Skills"):
+            st.session_state.section = "skills"
+    with c3:
+        if st.button("📄 Resume"):
+            st.session_state.section = "resume"
 
 st.markdown("---")
 
-# ---------------- DEFAULT SECTION ----------------
-if 'section' not in st.session_state:
-    st.session_state['section'] = "projects"
+# ---------------- HERO SECTION ----------------
+colA, colB = st.columns(2)
+with colA:
+    st.title("Farhan Ahmed")
+    st.subheader("Agentic AI Devloper | Python Developer | Web Developer")
+with colB:
+    if lottie_anim:
+        st_lottie(lottie_anim, height=300)
 
 # ---------------- PROJECTS ----------------
 projects = [
     {
-        "title": "PDF GENERATOR",
-        "description": "Automation tool using Python to generate PDFs easily.",
+        "title": "PDF Generator",
+        "desc": "Automation tool using Python to generate PDFs.",
         "image": "proj2.png",
-        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_pythondeveloper-automationtools-pdfgenerator-activity-7412236161559191552-jQlG"
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_pythondeveloper-automationtools-pdfgenerator"
     },
     {
-        "title": "Airplane Flight",
-        "description": "Streamlit app to manage airplane ticket registrations.",
+        "title": "Airplane Ticket App",
+        "desc": "Streamlit app for airplane ticket registration.",
         "image": "proj1.png",
-        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects-codingjourney-activity-7400967741312004097-J1_j"
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects"
+    },
+    {
+        "title": "Currency Exchanger",
+        "desc": "Real-time currency converter with Forex.",
+        "image": "proj3.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange"
+    },
+    {
+        "title": "Quiz Game",
+        "desc": "Live API based quiz game.",
+        "image": "proj4.png",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_quizgame"
+    },
+    {
+        "title": "Streamlit Web App",
+        "desc": "Complete interactive Streamlit app.",
+        "image": "proj6.jfif",
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-web"
     }
 ]
 
-if st.session_state['section'] == "projects":
-    st.subheader("📁 My Projects")
-    for project in projects:
-        cols = st.columns([3, 1])
-        with cols[0]:
-            st.write(f"### {project['title']}")
-            st.write(project["description"])
-            if os.path.exists(project["image"]):
-                img = Image.open(project["image"])
-                st.image(img, use_column_width=True)
-            else:
-                st.warning(f"Image nahi mila: {project['image']}")
-        with cols[1]:
-            st.markdown(
-                f'<a href="{project["url"]}" target="_blank" '
-                'style="display:block; background-color:#ff4b4b; color:white; padding:10px; '
-                'text-align:center; border-radius:5px; text-decoration:none;">▶ Watch Now</a>',
-                unsafe_allow_html=True
-            )
+if st.session_state.section == "projects":
+    st.header("📁 My Projects")
+    for p in projects:
+        st.subheader(p["title"])
+        st.write(p["desc"])
+
+        if os.path.exists(p["image"]):
+            st.image(p["image"], width=600)
+        else:
+            st.error(f"Image file missing: {p['image']}")
+
+        if st.button(f"▶ Watch {p['title']}"):
+            webbrowser.open_new_tab(p["url"])
+        st.markdown("---")
 
 # ---------------- CONTACT ----------------
-elif st.session_state['section'] == "contact":
-    st.subheader("📞 Contact Me")
-    st.write("Reach me via WhatsApp, Email, or send a message directly:")
+if st.session_state.section == "contact":
+    st.header("📞 Contact Me")
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown(
-            '<a href="https://wa.me/923363016943" target="_blank" '
-            'style="display:block; background-color:#25D366; color:white; padding:10px; '
-            'text-align:center; border-radius:5px; text-decoration:none;">WhatsApp</a>',
-            unsafe_allow_html=True
-        )
+        st.button("📱 WhatsApp: +92 336 3016943")
     with col2:
-        st.markdown(
-            '<a href="mailto:fmukhtar420@gmail.com" target="_blank" '
-            'style="display:block; background-color:#0072C6; color:white; padding:10px; '
-            'text-align:center; border-radius:5px; text-decoration:none;">Email</a>',
-            unsafe_allow_html=True
-        )
+        st.button("📧 Email: fmukhtar420@gmail.com")
 
-    st.write("---")
+    st.markdown("### Send Message")
 
-    # ---------------- MESSAGE FORM ----------------
-    with st.form("contact_form", clear_on_submit=True):
-        name = st.text_input("Your Name")
-        email = st.text_input("Your Email")
-        message = st.text_area("Your Message")
-        submit_button = st.form_submit_button("Send Message")
-        if submit_button:
-            if name and email and message:
-                url = f"https://formsubmit.co/fmukhtar420@gmail.com?name={name}&email={email}&message={message}"
-                webbrowser.open_new_tab(url)
-                st.success("Message sent successfully!")
-            else:
-                st.error("Please fill all the fields before submitting.")
+   
+st.header("📞 Contact Me")
+
+
+
+contact_form = """
+
+<form action="https://formsubmit.co/ucristano37@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <input type="text" name="name" placeholder="Your Name" required
+   style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px;">
+
+  <input type="email" name="email" placeholder="Your Email" required
+   style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px;">
+
+  <textarea name="message" placeholder="Your Message" required
+   style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px;"></textarea>
+
+  <button type="submit"
+   style="width:100%; padding:12px; background:#ff4b4b; color:white;
+   border:none; border-radius:6px; font-size:16px;">
+   Send Message 🚀
+  </button>
+</form>
+"""
+
+left, right = st.columns(2)
+
+with left:
+    st.markdown(contact_form, unsafe_allow_html=True)
+
+with right:
+    st.info("📨 Your message will be delivered safely & quickly ✅")
+
+
+# ---------------- SKILLS ----------------
+if st.session_state.section == "skills":
+    st.header("🛠 Skills")
+    st.write("""
+- HTML  
+- CSS  
+- TypeScript  
+- JavaScript  
+- Node.js  
+- Tailwind CSS  
+- Python  
+- Agentic AI Developer  
+""")
 
 # ---------------- RESUME ----------------
-elif st.session_state['section'] == "resume":
+if st.session_state.section == "resume":
+    st.header("📄 Download Resume")
     st.markdown(
-        '<a href="/mnt/data/53bf4c03-001e-499c-ba26-53bde8ca1b4e.docx" download '
-        'style="display:inline-block; background-color:#555555; color:white; padding:10px 20px; '
-        'text-align:center; border-radius:5px; text-decoration:none;">Download Resume</a>',
+        '<a href="/mnt/data/your_cv.docx" download '
+        'style="color:white; background:#444; padding:12px; border-radius:6px; text-decoration:none;">Download CV</a>',
         unsafe_allow_html=True
     )
 
-    st.write("---")
 
-# ---------------- Skills ----------------
-st.subheader("Skills 🛠️")
-skills = ["HTML", "TypeScript", "JavaScript", "Python", "Agentic AI Engineer", "Next.js"]
-st.write(", ".join(skills))
-
-# ---------------- Social Buttons ----------------
-st.write("Connect with me:")
-col1, col2 = st.columns(2)
-with col1:
-    if st.button("🔗 LinkedIn"):
-        webbrowser.open_new_tab("https://www.linkedin.com/in/farhan-ahmed-05140b299")
-with col2:
-    if st.button("🐙 GitHub"):
-        webbrowser.open_new_tab("https://github.com/farhan-ahmed246")
+ 
