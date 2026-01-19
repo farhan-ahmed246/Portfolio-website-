@@ -94,25 +94,25 @@ projects = [
     {
         "title": "Airplane Flight",
         "description": "Streamlit app to manage airplane ticket registrations.",
-        "image": "proj3.png",
+        "image": "proj2.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects-codingjourney-activity-7400967741312004097-J1_j?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Currency Exchanger",
         "description": "Real-time currency converter with Forex integration.",
-        "image": "proj4.png",
+        "image": "proj3.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange-forextrading-fastcash-activity-7410780475549450241-L-a3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Streamlit Web App",
         "description": "Complete Streamlit web app for interactive projects.",
-        "image": "proj5.png",
+        "image": "proj4.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_title-build-a-complete-streamlit-web-activity-7401542239014862848-ndM4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Quiz Game with Live API",
         "description": "Interactive quiz game fetching questions from live APIs.",
-        "image": "proj6.png",
+        "image": "proj5.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_quizgame-programmingproject-webdevelopment-activity-7419014868546060288-Zhlp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     }
 ]
