@@ -90,7 +90,7 @@ projects = [
     {
         "title": "Streamlit Web App",
         "desc": "Complete interactive Streamlit app.",
-        "image": "proj6.jfif",
+        "image": "proj6.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-web"
     }
 ]
