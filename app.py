@@ -177,11 +177,11 @@ if st.session_state.section == "skills":
 if st.session_state.section == "resume":
     st.header("📄 Download Resume")
 
-    with open("Farhan_CV.pdf", "rb") as file:
+    with open("farhan_cv.pdf", "rb") as file:
         st.download_button(
             label="📄 Download CV",
             data=file,
-            file_name="Farhan_CV.pdf",
+            file_name="farhan_cv.pdf",
             mime="application/pdf"
         )
 
