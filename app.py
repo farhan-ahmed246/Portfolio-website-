@@ -176,11 +176,14 @@ if st.session_state.section == "skills":
 # ---------------- RESUME ----------------
 if st.session_state.section == "resume":
     st.header("📄 Download Resume")
-    st.markdown(
-        '<a href="/mnt/data/your_cv.docx" download '
-        'style="color:white; background:#444; padding:12px; border-radius:6px; text-decoration:none;">Download CV</a>',
-        unsafe_allow_html=True
-    )
+
+    with open("Farhan_Mukhtar_CV.pdf", "rb") as file:
+        st.download_button(
+            label="📄 Download CV",
+            data=file,
+            file_name="Farhan_CV.pdf",
+            mime="application/pdf"
+        )
 
 
  
