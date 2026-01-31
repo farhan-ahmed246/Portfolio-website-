@@ -66,13 +66,13 @@ projects = [
     {
         "title": "PDF Generator",
         "desc": "Automation tool using Python to generate PDFs.",
-        "image": "proj2.png",
+        "image": "proj9.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_pythondeveloper-automationtools-pdfgenerator"
     },
     {
         "title": "Airplane Ticket App",
         "desc": "Streamlit app for airplane ticket registration.",
-        "image": "proj3.png",
+        "image": "proj8.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects"
     },
     {
