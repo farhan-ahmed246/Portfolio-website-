@@ -72,13 +72,13 @@ projects = [
     {
         "title": "Airplane Ticket App",
         "desc": "Streamlit app for airplane ticket registration.",
-        "image": "proj1.png",
+        "image": "proj3.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_streamlit-pythonprojects"
     },
     {
         "title": "Currency Exchanger",
         "desc": "Real-time currency converter with Forex.",
-        "image": "proj3.png",
+        "image": "proj1.png",
         "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange"
     },
     {
