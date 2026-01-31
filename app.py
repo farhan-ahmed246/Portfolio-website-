@@ -79,7 +79,7 @@ projects = [
         "title": "Currency Exchanger",
         "desc": "Real-time currency converter with Forex.",
         "image": "proj1.png",
-        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_currencyexchange"
+        "url": "https://www.linkedin.com/posts/farhan-ahmed-05140b299_codeoflife-currencyconvertor-streamlit-activity-7423248994497146880-ej8L?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgkSn0BsUyA_gMmgApiEXNCiDDJpFKzilE"
     },
     {
         "title": "Quiz Game",
